@@ -6,21 +6,25 @@ const Cart = (props) => {
     const salary = (previous, current) => previous + current.balance;
     const totalSalary = cart.reduce(salary, 0);
 
-    let nameValue = '';
-    for (const names of cart) {
-        nameValue = nameValue + '  ' + names.name;
-    }
-
     return (
-        <div className="cart">
+        <div className="cart text-wrap">
             <h5>Company Added: {cart.length}</h5>
             <h6>Salary: ${totalSalary.toFixed(2)}</h6>
-            <h6>CEO of the Companies:
-                {/* split the white space */}
-                {
-                    nameValue.split('  ').map(name => <h6>{name}</h6>)
-                }
-            </h6>
+
+            {
+                cart.map(cartProps => {
+                    return (
+                        <>
+                            <div className="cart-list d-flex" key={cartProps._id}>
+                                <img src={cartProps.picture} className="image rounded-circle border-light" width="50px" height="50px" alt="" />
+                                <li className="py-2">{cartProps.name} added</li>
+                            </div>
+
+                        </>
+                    )
+                })
+            }
+
         </div>
     );
 };

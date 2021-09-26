@@ -16,8 +16,8 @@ const Company = () => {
         setCart(newList);
     }
     return (
-        <div className="company py-5 container ">
-            <div className="row">
+        <div className="company py-5 px-2 ">
+            <div className="row w-100">
                 <div className="col-lg-10 col">
                     <div className="row  row-cols-1 row-cols-md-3 g-4 text-center">
                         {
@@ -30,7 +30,7 @@ const Company = () => {
                     </div>
 
                 </div>
-                <div className="col-lg-2 col">
+                <div className="col-lg-2 col ">
                     <Cart cart={cart} />
                 </div>
             </div>
