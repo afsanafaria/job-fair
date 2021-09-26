@@ -1,0 +1,25 @@
+.card{
+    border: 2px solid DarkSlateGray;
+    border-radius: 5px;
+}
+.card:hover{
+    border: 2px solid white;
+    background-color: DarkSlateGray;
+    color: white;
+   
+}
+button{
+    padding: 7px 30px;
+    background-color:DarkSlateGray ;
+    color: white;
+}
+.card:hover button{
+    background-color: white;
+    color: DarkSlateGray;
+}
+img{
+    border: 3px solid DarkSlateGray;
+}
+.card:hover img{
+    border: 3px solid white;
+}
