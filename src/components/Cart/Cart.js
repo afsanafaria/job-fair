@@ -3,7 +3,6 @@ import './Cart.css'
 
 const Cart = (props) => {
     const { cart } = props;
-
     const salary = (previous, current) => previous + current.balance;
     const totalSalary = cart.reduce(salary, 0);
 

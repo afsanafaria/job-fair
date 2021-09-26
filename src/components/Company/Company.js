@@ -16,9 +16,9 @@ const Company = () => {
         setCart(newList);
     }
     return (
-        <div className="company my-5 container-lg ">
+        <div className="company py-5 container ">
             <div className="row">
-                <div className="col-lg-10 col-md-8 ">
+                <div className="col-lg-10 col">
                     <div className="row  row-cols-1 row-cols-md-3 g-4 text-center">
                         {
                             companyLists.map(companyList => <Ceo
@@ -30,12 +30,10 @@ const Company = () => {
                     </div>
 
                 </div>
-                <div className="col-lg-2 col-md-4">
+                <div className="col-lg-2 col">
                     <Cart cart={cart} />
                 </div>
             </div>
-
-
         </div>
     );
 };
